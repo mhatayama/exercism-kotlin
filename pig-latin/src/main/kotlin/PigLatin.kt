@@ -1,6 +1,6 @@
 object PigLatin {
     val vowels = "aeiou"
-    val consonants = ('a'..'z').filterNot { vowels.contains(it) }.joinToString()
+    val consonants = ('a'..'z').filterNot { vowels.contains(it) }.joinToString("")
 
     fun translate(phrase: String): String {
         return phrase.split(" ").joinToString(" ") { piggify(it) }
