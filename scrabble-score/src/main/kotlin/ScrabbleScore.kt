@@ -6,6 +6,6 @@ object ScrabbleScore {
             VALUES.first { it.second.contains(c) }.first
 
     fun scoreWord(word: String): Int =
-            word.toList().map { scoreLetter(it.toUpperCase()) }.sum()
+            word.map { scoreLetter(it.toUpperCase()) }.sum()
 }
 
